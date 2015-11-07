@@ -6,7 +6,7 @@ $rds = new Aws\Rds\RdsClient([
     'region'  => 'us-west-2'
 ]);
 $result = $rds->createDBInstance([
-    'AllocatedStorage' => 10,
+    'AllocatedStorage' => 5,
     #'AutoMinorVersionUpgrade' => true || false,
     #'AvailabilityZone' => '<string>',
     #'BackupRetentionPeriod' => <integer>,
@@ -20,7 +20,7 @@ $result = $rds->createDBInstance([
     #'DBSecurityGroups' => ['<string>', ...],
     #'DBSubnetGroupName' => '<string>',
     'Engine' => 'MySQL', // REQUIRED
-    'EngineVersion' => '5.5.41',
+    #'EngineVersion' => '5.5.41',
     #'Iops' => <integer>,
     #'KmsKeyId' => '<string>',
    # 'LicenseModel' => '<string>',
@@ -60,7 +60,7 @@ print_r($endpoint);
 //$endpoint = substr($endpoint,0,-5);
 //print "================\n".$endpoint."===================\n";
 $link = mysqli_connect($endpoint,"controller","ilovebunnies","customerrecords") or die("Error " . mysqli_error($link)); 
-echo "Here is the result: " . $link;
+//echo "Here is the result: " . $link;
 $sql = "CREATE TABLE comments 
 (
 ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
