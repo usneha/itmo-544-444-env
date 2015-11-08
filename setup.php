@@ -68,5 +68,5 @@ PosterName VARCHAR(32),
 Title VARCHAR(32),
 Content VARCHAR(500)
 )";
-$con->query($sql);
+$link>query($sql);
 ?>
